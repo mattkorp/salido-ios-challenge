@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		460E38081ACCA3480014A3AD /* ABCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E38071ACCA3480014A3AD /* ABCTests.swift */; };
 		460E38121ACCA4220014A3AD /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E38111ACCA4220014A3AD /* Cart.swift */; };
-		460E38141ACCA4500014A3AD /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E38131ACCA4500014A3AD /* File.swift */; };
+		460E38141ACCA4500014A3AD /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E38131ACCA4500014A3AD /* CartItem.swift */; };
 		460E38161ACCA4930014A3AD /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E38151ACCA4930014A3AD /* CartTableViewCell.swift */; };
 		460E38181ACCA4D60014A3AD /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E38171ACCA4D60014A3AD /* CartTableViewController.swift */; };
 		460E381C1ACCA55D0014A3AD /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E381B1ACCA55D0014A3AD /* DetailTableViewCell.swift */; };
@@ -44,7 +44,7 @@
 		460E386B1ACCAA170014A3AD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E38691ACCAA170014A3AD /* DataManager.swift */; };
 		460E386C1ACCAA170014A3AD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E386A1ACCAA170014A3AD /* Router.swift */; };
 		460E386E1ACCAA250014A3AD /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E386D1ACCAA250014A3AD /* DetailTableViewController.swift */; };
-		460E38701ACCAA740014A3AD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460E386F1ACCAA740014A3AD /* Info.plist */; };
+		46A3A60C1ACD0639001C5751 /* CartOutputPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A3A60B1ACD0639001C5751 /* CartOutputPopoverViewController.swift */; };
 		C141B53561CD1A40BA2B3956 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6A110667652F1D6CEB7525 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -65,7 +65,7 @@
 		460E38061ACCA3480014A3AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		460E38071ACCA3480014A3AD /* ABCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABCTests.swift; sourceTree = "<group>"; };
 		460E38111ACCA4220014A3AD /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cart.swift; path = Model/Cart.swift; sourceTree = "<group>"; };
-		460E38131ACCA4500014A3AD /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = File.swift; path = Model/File.swift; sourceTree = "<group>"; };
+		460E38131ACCA4500014A3AD /* CartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartItem.swift; path = Model/CartItem.swift; sourceTree = "<group>"; };
 		460E38151ACCA4930014A3AD /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartTableViewCell.swift; path = View/CartTableViewCell.swift; sourceTree = "<group>"; };
 		460E38171ACCA4D60014A3AD /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CartTableViewController.swift; path = Controller/CartTableViewController.swift; sourceTree = "<group>"; };
 		460E381B1ACCA55D0014A3AD /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailTableViewCell.swift; path = View/DetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,7 +101,8 @@
 		460E38691ACCAA170014A3AD /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = Network/DataManager.swift; sourceTree = "<group>"; };
 		460E386A1ACCAA170014A3AD /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Network/Router.swift; sourceTree = "<group>"; };
 		460E386D1ACCAA250014A3AD /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailTableViewController.swift; path = Controller/DetailTableViewController.swift; sourceTree = "<group>"; };
-		460E386F1ACCAA740014A3AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		460E38731ACCB1430014A3AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46A3A60B1ACD0639001C5751 /* CartOutputPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartOutputPopoverViewController.swift; sourceTree = "<group>"; };
 		4D6A110667652F1D6CEB7525 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FA4C6BE80F78D8243F7893 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,11 +170,11 @@
 		460E37EF1ACCA3480014A3AD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				460E38731ACCB1430014A3AD /* Info.plist */,
 				460E385B1ACCA9EA0014A3AD /* AppDelegate.swift */,
 				460E385F1ACCA9EA0014A3AD /* Configuration.swift */,
 				460E38621ACCA9EA0014A3AD /* LocalCache.swift */,
 				460E38601ACCA9EA0014A3AD /* Images.xcassets */,
-				460E386F1ACCAA740014A3AD /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,11 +226,11 @@
 		460E38571ACCA7380014A3AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				460E382B1ACCA69E0014A3AD /* Wine.swift */,
 				460E38111ACCA4220014A3AD /* Cart.swift */,
-				460E38131ACCA4500014A3AD /* File.swift */,
+				460E38131ACCA4500014A3AD /* CartItem.swift */,
 				460E38231ACCA6010014A3AD /* Product.swift */,
 				460E38291ACCA6800014A3AD /* User.swift */,
-				460E382B1ACCA69E0014A3AD /* Wine.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -247,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				460E38171ACCA4D60014A3AD /* CartTableViewController.swift */,
+				46A3A60B1ACD0639001C5751 /* CartOutputPopoverViewController.swift */,
 				460E386D1ACCAA250014A3AD /* DetailTableViewController.swift */,
 				460E381F1ACCA5CA0014A3AD /* ListingTableViewController.swift */,
 				460E38271ACCA6550014A3AD /* SignInViewController.swift */,
@@ -357,7 +359,6 @@
 			files = (
 				460E38661ACCA9EA0014A3AD /* Images.xcassets in Resources */,
 				460E384E1ACCA7040014A3AD /* Info.plist in Resources */,
-				460E38701ACCAA740014A3AD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,9 +444,10 @@
 				460E384C1ACCA7040014A3AD /* Format.swift in Sources */,
 				460E382A1ACCA6800014A3AD /* User.swift in Sources */,
 				460E38471ACCA7040014A3AD /* Data.swift in Sources */,
-				460E38141ACCA4500014A3AD /* File.swift in Sources */,
+				460E38141ACCA4500014A3AD /* CartItem.swift in Sources */,
 				460E386B1ACCAA170014A3AD /* DataManager.swift in Sources */,
 				460E38651ACCA9EA0014A3AD /* Configuration.swift in Sources */,
+				46A3A60C1ACD0639001C5751 /* CartOutputPopoverViewController.swift in Sources */,
 				460E38681ACCA9EA0014A3AD /* LocalCache.swift in Sources */,
 				460E38241ACCA6010014A3AD /* Product.swift in Sources */,
 				460E384B1ACCA7040014A3AD /* Fetcher.swift in Sources */,
@@ -513,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -549,7 +551,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -562,6 +564,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ABC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -573,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ABC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

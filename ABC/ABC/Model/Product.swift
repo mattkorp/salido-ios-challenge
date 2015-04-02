@@ -37,4 +37,8 @@ class Product {
         priceRetail = json["PriceRetail"].doubleValue
         rating      = json["Ratings", "HighestScore"].intValue
     }
+    
+    func getDictionaryValues() -> [String: AnyObject] {
+        return(["id": id, "name": name, "price": priceMin])
+    }
 }

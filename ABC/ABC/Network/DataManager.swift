@@ -76,4 +76,12 @@ class DataManager {
             }
         }
     }
+    
+    class func postUserCart() -> [String: AnyObject] { // completion: NSDictionary? -> ()) {
+        let parameters = LocalCache.user.getDictionaryValues()
+        let request = Router.PostUserData(parameters)
+        return parameters
+        
+        // POST request here
+    }
 }

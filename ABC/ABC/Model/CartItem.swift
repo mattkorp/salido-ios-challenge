@@ -28,4 +28,9 @@ class CartItem {
         quantity = qty
         calculateTotal()
     }
+    
+    func getDictionaryValues() -> [String: AnyObject] {
+        let productDict = product.getDictionaryValues()
+        return(["quantity": quantity, "priceTotal": priceTotal, "product": productDict])
+    }
 }

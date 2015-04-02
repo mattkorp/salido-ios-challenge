@@ -58,11 +58,25 @@ class Cart {
     Calculations
     */
     func calculateTotals() {
-        totalItems = Int(items.map { $0.quantity }.reduce(0,{ UInt8($0) + UInt8($1) }))
+        totalItems = Int(items.map { Double($0.quantity) }.reduce(0,{ $0 + $1 }))
         subtotal = items.map { $0.priceTotal }.reduce(0,+)
         salesTax = subtotal * taxRate
         shipping = subtotal * shippingRate
         grandTotal = subtotal + shipping + salesTax
     }
     
+    func getDictionaryValues() -> [String: AnyObject] {
+        var itemDictionary = [String: AnyObject]()
+        for (index, item) in enumerate(items) {
+            itemDictionary["\(index)"] = item.getDictionaryValues()
+        }
+        
+        var dictionary = [String: AnyObject]()
+        dictionary["items"] = itemDictionary
+        dictionary["subtotal"] = subtotal
+        dictionary["tax"] = salesTax
+        dictionary["shipping"] = shipping
+        dictionary["total"] = grandTotal
+        return dictionary
+    }
 }

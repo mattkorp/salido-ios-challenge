@@ -20,6 +20,10 @@ class User: Printable {
         cart = Cart()
     }
     
+    func getDictionaryValues() -> [String: AnyObject] {
+        return(["username": username, "cart": cart.getDictionaryValues()])
+    }
+    
     var description: String {
         return "\(username)"
     }

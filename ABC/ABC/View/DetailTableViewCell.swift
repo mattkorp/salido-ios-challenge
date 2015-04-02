@@ -40,11 +40,11 @@ class DetailTableViewCell: UITableViewCell, UITextFieldDelegate {
         contentView.addSubview(labelImage)
         
         // Cart quantity UI
-        let quantityLabel = UILabel(frame: CGRectMake(0, 0, 40, 20))
+        let quantityLabel = UILabel(frame: CGRectMake(0, 0, 30, 20))
         quantityLabel.text = "Qty:"
         quantityLabel.font = Configuration.helveticaLight12
         
-        quantityTextField = UITextField(frame: CGRectMake(40, 0, 40, 20))
+        quantityTextField = UITextField(frame: CGRectMake(30, 0, 30, 20))
         quantityTextField.font = Configuration.helveticaLight12
         quantityTextField.borderStyle = UITextBorderStyle.RoundedRect
         quantityTextField.backgroundColor = UIColor.whiteColor()
@@ -53,7 +53,7 @@ class DetailTableViewCell: UITableViewCell, UITextFieldDelegate {
         quantityTextField.keyboardType = UIKeyboardType.NumbersAndPunctuation
         quantityTextField.autocorrectionType = UITextAutocorrectionType.No
         
-        quantityUpdate = UIButton(frame: CGRectMake(84, 0, 60, 20))
+        quantityUpdate = UIButton(frame: CGRectMake(64, 0, 60, 20))
         quantityUpdate.setTitle("Update", forState: .Normal)
         quantityUpdate.titleLabel?.font = Configuration.helveticaLight12
         quantityUpdate.addTarget(self, action: "updateCart:", forControlEvents: .TouchUpInside)
@@ -82,7 +82,7 @@ class DetailTableViewCell: UITableViewCell, UITextFieldDelegate {
         addConstraints([
             NSLayoutConstraint(item: quantityView, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: -8.0),
             NSLayoutConstraint(item: quantityView, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1.0, constant: -8.0),
-            NSLayoutConstraint(item: quantityView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 164.0),
+            NSLayoutConstraint(item: quantityView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 124.0),
             NSLayoutConstraint(item: quantityView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1.0, constant: 20.0)
             ])
     }

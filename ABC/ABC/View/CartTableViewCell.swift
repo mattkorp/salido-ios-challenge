@@ -22,9 +22,9 @@ class CartTableViewCell: UITableViewCell, UITextFieldDelegate {
     var name              = UILabel()
     var price             = UILabel()
     var total             = UILabel()
-    var summaryLabel         = UILabel()
-    var summaryValue        = UILabel()
-    var itemTotal           = UILabel()
+    var summaryLabel      = UILabel()
+    var summaryValue      = UILabel()
+    var itemTotal         = UILabel()
     var trashButton       = UIButton()
     var padding: CGFloat  = 5.0
     var quantityDelegate: CartTableViewCellProtocol?
@@ -81,18 +81,14 @@ class CartTableViewCell: UITableViewCell, UITextFieldDelegate {
         
         contentView.addSubview(cellView)
         cellView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        let viewsDict = ["cellView": cellView]
-        
-        contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[cellView]-|", options: .allZeros, metrics: nil, views: viewsDict))
-        contentView.addConstraints(
-            NSLayoutConstraint.constraintsWithVisualFormat("V:|-[cellView]-|", options: .allZeros, metrics: nil, views: viewsDict))
+    
     }
     
     func updateCell(row: Int, quantity: Int, name: String, unitPrice: Double, totalPrice: Double) {
         trashButton.tag               = row
         self.name.text                = name
-        price.text                    = "$\(unitPrice)"
-        total.text                    = "$\(totalPrice)"
+        price.text                    = "\(unitPrice)"
+        total.text                    = "\(totalPrice)"
         quantityTextField.placeholder = String(quantity)
     }
     
@@ -106,15 +102,19 @@ class CartTableViewCell: UITableViewCell, UITextFieldDelegate {
         }
         summaryLabel.text = label
         let valueStr = String(format: "%.2f", value)
-        summaryValue.text = valueStr
+        summaryValue.text = "$ " + valueStr
     }
-    
+
     override func layoutSubviews() {
-        quantityTextField.frame = CGRectMake(0, padding, 30, 20)
-        name.frame              = CGRectMake(30+padding, 0, 200, 30)
-        price.frame             = CGRectMake(225+padding, 0, 40, 30)
-        total.frame             = CGRectMake(270+padding, 0, 40, 30)
-        trashButton.frame       = CGRectMake(325+padding, 2, 20, 30)
+        quantityTextField.frame = CGRectMake(0, padding, 40, 20)
+        name.frame              = CGRectMake(40+padding, 0, 130, 30)
+        price.frame             = CGRectMake(170+padding, 0, 50, 30)
+        total.frame             = CGRectMake(220+padding, 0, 50, 30)
+        trashButton.frame       = CGRectMake(280+padding, 2, 20, 30)
+        
+        let viewsDict = ["cellView": cellView]
+        contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-[cellView]-|", options: .allZeros, metrics: nil, views: viewsDict))
+        contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-[cellView]-|", options: .allZeros, metrics: nil, views: viewsDict))
         
         itemTotal.frame = CGRectMake(0, 0, 30, 30)
         let labelLen: CGFloat = 80
