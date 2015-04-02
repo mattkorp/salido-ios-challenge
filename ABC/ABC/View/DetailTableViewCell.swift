@@ -52,8 +52,10 @@ class DetailTableViewCell: UITableViewCell, UITextFieldDelegate {
         quantityTextField.textAlignment = NSTextAlignment.Center
         quantityTextField.keyboardType = UIKeyboardType.NumbersAndPunctuation
         quantityTextField.autocorrectionType = UITextAutocorrectionType.No
+        quantityTextField.delegate = self
         
         quantityUpdate = UIButton(frame: CGRectMake(64, 0, 60, 20))
+        quantityUpdate.enabled = false
         quantityUpdate.setTitle("Update", forState: .Normal)
         quantityUpdate.titleLabel?.font = Configuration.helveticaLight12
         quantityUpdate.addTarget(self, action: "updateCart:", forControlEvents: .TouchUpInside)
@@ -159,4 +161,24 @@ class DetailTableViewCell: UITableViewCell, UITextFieldDelegate {
                 self.quantityTextField.text = ""
         })
     }
+    
+    /**
+        TextFieldDelegate method to check input validity
+        Check if integer in textField
+    */
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        // Find out what the text field will be after adding the current edit
+        let text = (textField.text as NSString).stringByReplacingCharactersInRange(range, withString: string)
+        
+        if let intVal = text.toInt() {
+            // Text field converted to an Int
+            quantityUpdate.enabled = true
+        } else {
+            // Text field is not an Int
+            quantityUpdate.enabled = false
+        }
+        
+        return true
+    }
+    
 }

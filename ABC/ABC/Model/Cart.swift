@@ -65,6 +65,11 @@ class Cart {
         grandTotal = subtotal + shipping + salesTax
     }
     
+    /**
+        Make dictionary for output parameters
+    
+    :returns: dictionary of values
+    */
     func getDictionaryValues() -> [String: AnyObject] {
         var itemDictionary = [String: AnyObject]()
         for (index, item) in enumerate(items) {

@@ -54,7 +54,7 @@ class CartTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Qty     Item                                                               Price         Total  Remove"
+        return "Qty     Item                                Price         Total     Remove"
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -124,32 +124,22 @@ class CartTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     func checkout() {
         if user.cart.totalItems > 0 {
-            searchViewLeftButtonPressed()
+            checkoutPressed()
         }
     }
 
-    func searchViewLeftButtonPressed() {
+    func checkoutPressed() {
         popover = CartOutputPopoverViewController()
         popover.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
         popover.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-        presentViewController(popover, animated: true, completion: nil)
+        presentViewController(popover, animated: true) {
+            self.user.cart.removeAllItems()
+            self.tableView.reloadData()
+        }
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!) -> UIModalPresentationStyle {
         return .OverCurrentContext
     }
-    
-    func successAlert() {
-        let n = user.username
-        let t = String(format: "%.2f", user.cart.grandTotal)
-        var alert = UIAlertController(title: "Thanks " + n, message: "You have been charged: $" + t, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        var action = UIAlertAction(title: "Ok", style: .Cancel) { _ in
-            self.user.cart.removeAllItems()
-            self.tableView.reloadData()
-        }
-        
-        alert.addAction(action)
-        presentViewController(alert, animated: true, completion: nil)
-    }
+
 }

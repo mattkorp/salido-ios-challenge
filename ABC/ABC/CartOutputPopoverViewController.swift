@@ -24,14 +24,15 @@ class CartOutputPopoverViewController: UIViewController, UIPopoverPresentationCo
         blurredEffect.frame = view.bounds
         view.addSubview(blurredEffect)
         
-        containerView = UIView(frame: CGRectMake(20, 50, view.bounds.width-40, 400))
-        containerView.layer.cornerRadius = 5
+        containerView = UIView(frame: CGRectMake(20, 50, view.bounds.width-40, 300))
+        containerView.layer.cornerRadius = Configuration.cornerRadius
         containerView.backgroundColor = UIColor.whiteColor()
         view.addSubview(containerView)
         
         var textView = UITextView(frame: CGRectMake(0, 40, containerView.bounds.width, containerView.bounds.height))
         containerView.addSubview(textView)
         textView.font = Configuration.helveticaMedium10
+        textView.layer.cornerRadius = Configuration.cornerRadius
         let d = DataManager.postUserCart()
         let e = SwiftyJSON.JSON(d)
         textView.text = "\(e)"

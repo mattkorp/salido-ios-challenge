@@ -18,12 +18,13 @@ struct Configuration {
     static let orangeUIColor    = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1.0)
     static let greenUIColor     = UIColor(red:0.34, green:0.68, blue:0.42, alpha:1)
     
-    static let helveticaLight10 = UIFont(name: "HelveticaNeue-Light", size: 10.0)
-    static let helveticaLight12 = UIFont(name: "HelveticaNeue-Light", size: 12.0)
+    static let helveticaLight10  = UIFont(name: "HelveticaNeue-Light", size: 10.0)
+    static let helveticaLight12  = UIFont(name: "HelveticaNeue-Light", size: 12.0)
     static let helveticaMedium10 = UIFont(name: "HelveticaNeue-Medium", size: 10.0)
     static let helveticaMedium14 = UIFont(name: "HelveticaNeue-Medium", size: 14.0)
     static let helveticaMedium20 = UIFont(name: "HelveticaNeue-Medium", size: 20.0)
-    
+    static let helveticaBold14   = UIFont(name: "HelveticaNeue-Bold", size: 14.0)
+
     static let cornerRadius     = CGFloat(3)
     
     // Image placeholder. Making it the same size as the labels

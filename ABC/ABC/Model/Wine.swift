@@ -61,6 +61,7 @@ class Wine {
             }
         }
         
+        // Sort categories for tableView
         self.wineData["Wine Type"]   = sorted(type) { $0.0 < $1.0 }
         self.wineData["Region"]      = sorted(region) { $0.0 < $1.0 }
         self.wineData["Vintage"]     = sorted(vintage) { $0.0 < $1.0 }
